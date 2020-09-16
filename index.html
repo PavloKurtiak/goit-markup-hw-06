@@ -63,7 +63,11 @@
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
 
-          <button class="margin-auto button hero-button" type="button" data-modal-open>
+          <button
+            class="margin-auto button hero-button"
+            type="button"
+            data-modal-open
+          >
             Заказать услугу
           </button>
         </div>
@@ -542,8 +546,18 @@
         <div class="mailing">
           <b class="advantages-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
           <form class="flexbox form-footer">
-            <input class="input-footer" type="email" name="email" id="" placeholder="E-mail">
-            <button type="submit" class="button hero-button flexbox footer-button">Подписаться
+            <input
+              class="input-footer"
+              type="email"
+              name="email"
+              id=""
+              placeholder="E-mail"
+            />
+            <button
+              type="submit"
+              class="button hero-button flexbox footer-button"
+            >
+              Подписаться
               <svg class="link-icon button-icon" width="24" height="24">
                 <use href="./images/svg.svg#icon-follow"></use>
               </svg>
@@ -558,18 +572,51 @@
         <button data-modal-close class="flexbox button modal-button">
           <svg width="18" height="18">
             <use href="./images/svg.svg#icon-close"></use>
-          </svg></button>
-        <p>Оставьте свои данные, мы вам перезвоним</p>
-        <form class="flexbox form-modal">
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name">
-          <label for="phone">Телефон</label>
-          <input type="tel" name="phone" id="phone">
-          <label for="email">Почта</label>
-          <input type="email" name="email" id="eamil">
-          <label for="">Комментарий</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </form>
+          </svg>
+        </button>
+        <div class="conteiner-modal">
+          <p class="main-text-modal">Оставьте свои данные, мы вам перезвоним</p>
+          <form class="flexbox form-modal">
+            <label for="name" class="label-modal">Имя
+              
+              <input type="text" name="name" id="name" autocomplete="off" class="input-modal" />
+              <svg width="18" height="18" class="icon-input">
+                <use href="./images/svg.svg#icon-name"></use>
+              </svg>
+            </label>
+            <div class="input-icon">
+              
+            </div>
+            <label for="phone" class="label-modal">Телефон</label>
+            <div class="input-icon">
+              <svg width="18" height="18" class="icon-input">
+                <use href="./images/svg.svg#icon-phone-2"></use>
+              </svg>
+              <input type="tel" name="phone" id="phone" class="input-modal" />
+            </div>
+            <label for="email" class="label-modal">Почта</label>
+            <div class="input-icon">
+              <svg width="18" height="18" class="icon-input">
+                <use href="./images/svg.svg#icon-email-2"></use>
+              </svg>
+              <input type="email" name="email" id="email" class="input-modal" />
+            </div>
+            <label for="comment" class="label-modal">Комментарий</label>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Введите текст"
+              class="input-modal comment"
+            ></textarea>
+            <input type="checkbox" name="agree" id="agree" />
+            <label for="agree"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="">Условия договора</a>
+            </label>
+            <button type="submit" class="button hero-button">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>

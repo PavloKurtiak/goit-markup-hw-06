@@ -74,6 +74,10 @@ img {
   height: auto;
 }
 
+textarea {
+  resize: none;
+}
+
 /* утилиты */
 
 .list {
@@ -695,7 +699,8 @@ img {
   flex-direction: column;
 }
 
-.join .advantages-title, .mailing .advantages-title {
+.join .advantages-title,
+.mailing .advantages-title {
   color: var(--primary-white-color);
 }
 
@@ -748,8 +753,6 @@ img {
   margin-top: 20px;
 }
 
-
-
 /* модалка */
 
 .backdrop {
@@ -767,7 +770,6 @@ img {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-
 }
 
 .backdrop.is-hidden .modal {
@@ -780,23 +782,92 @@ img {
   min-height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--primary-white-color);
 
   transition: transform 250ms var(--cubic-bezier);
 }
 
-
 .modal-button {
+  position: absolute;
   margin-left: auto;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-top: 8px;
-  margin-right: 8px;
+  top: 8px;
+  right: 8px;
+
   background-color: var(--primary-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .form-modal {
   flex-direction: column;
 }
+
+.main-text-modal {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--title-text-color);
+}
+
+.label-modal {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+
+  margin-bottom: 4px;
+}
+
+.input-modal:focus ~ .icon-input {
+  fill: var(--accent-color);
+}
+
+.input-modal {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding: 12px 42px;
+}
+
+.input-modal.comment {
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.conteiner-modal textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input-icon {
+  position: relative;
+}
+
+.icon-input {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+}
+
+.input-icon:focus {
+  fill: var(--accent-color);
+}
+
