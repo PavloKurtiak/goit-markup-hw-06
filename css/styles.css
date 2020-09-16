@@ -670,6 +670,11 @@ img {
 
 /* футер */
 
+.container.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
 .address-text {
   margin-top: 20px;
 
@@ -690,7 +695,7 @@ img {
   flex-direction: column;
 }
 
-.join .advantages-title {
+.join .advantages-title, .mailing .advantages-title {
   color: var(--primary-white-color);
 }
 
@@ -709,9 +714,41 @@ img {
   padding-left: 0;
 }
 
-.footer .colum {
+/* .footer .colum {
   margin-right: 70px;
+} */
+
+.flexbox.footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  margin-left: 12px;
 }
+
+.button-icon {
+  margin-left: 10px;
+}
+
+.input-footer {
+  background-color: var(--footer-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  height: 50px;
+  width: 358px;
+  padding-left: 16px;
+  color: var(--primary-white-color);
+}
+
+.input-footer::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-footer {
+  margin-top: 20px;
+}
+
+
 
 /* модалка */
 
@@ -758,4 +795,8 @@ img {
   margin-top: 8px;
   margin-right: 8px;
   background-color: var(--primary-white-color);
+}
+
+.form-modal {
+  flex-direction: column;
 }
