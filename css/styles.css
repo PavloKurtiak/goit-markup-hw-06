@@ -733,6 +733,7 @@ textarea {
 
 .button-icon {
   margin-left: 10px;
+  fill: var(--primary-white-color);
 }
 
 .input-footer {
@@ -802,6 +803,11 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-button:hover, .modal-button:focus {
+  fill: var(--accent-color);
+}
+
+
 .form-modal {
   flex-direction: column;
 }
@@ -844,9 +850,13 @@ textarea {
   padding: 12px 42px;
 }
 
+.input-modal:focus {
+  border-color: var(--accent-color);
+}
 .input-modal.comment {
   height: 120px;
   padding: 12px 16px;
+  margin-bottom: 20px;
 }
 
 .conteiner-modal textarea::placeholder {
@@ -870,4 +880,50 @@ textarea {
 .input-icon:focus {
   fill: var(--accent-color);
 }
+
+.submit-button {
+  max-width: 200px;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.icon-checkbox {
+ position: absolute;
+ left: 0;
+ top: 0;
+ opacity: 0;
+}
+
+.icon-off {
+ position: absolute;
+ left: 0;
+ top: 0;
+ opacity: 1;
+}
+
+.label {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+margin-left: auto;
+  margin-right: auto;
+}
+
+.link-agre {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.checkbox:checked ~ .icon-checkbox {
+  opacity: 1;
+}
+
+.checkbox:checked ~ .icon-off {
+  opacity: 0;
+}
+
 
