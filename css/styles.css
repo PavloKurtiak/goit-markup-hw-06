@@ -808,8 +808,17 @@ textarea {
 }
 
 .icon-close {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  /* top: 8px;
+  right: 8px;
+  position: absolute; */
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+/*  transform: translate(-50%, -50%); */
 }
 
 
@@ -857,6 +866,7 @@ textarea {
 
 .input-modal:focus {
   border-color: var(--accent-color);
+  outline: 1px solid var(--accent-color);;
 }
 .input-modal.comment {
   height: 120px;
